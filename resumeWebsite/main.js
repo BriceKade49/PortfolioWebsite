@@ -11,3 +11,12 @@ menuBtn.addEventListener('click', () => {
         document.getElementById("dropDown").style.display = 'none';
     }
 });
+
+function togglePopup() {
+    document.getElementById("popup-1").style.display = "none";
+}
+document.addEventListener('keydown', function (event) {
+    if (event.key === "Escape") {
+        document.getElementById("popup-1").style.display = "none";
+    }
+});

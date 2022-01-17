@@ -1,0 +1,216 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: unset;
+	font-family: sans-serif;
+	
+}
+#skrollr-body{
+	position:fixed;
+}
+body {
+	position: relative;
+	width: 100%;
+	scroll-behavior: smooth;
+	background-image: url("test.png");
+	background-size: cover;
+}
+.container {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	display: flex;
+	align-items: last baseline;
+}
+.container section
+{
+	position:relative;
+	min-width: 100%;
+	min-height: 100%;
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	height:  100vh;
+	background-image:url('EtherNet.png');
+	background-position:inherit;
+	background-size:auto;/*keeps blue ethernet cord from dublicating*/
+	align-items: start;/*plug button postion*/
+}
+
+.container section .content
+{
+	max-width: 800px;
+	padding: 70px;
+	text-align: center;
+
+}
+.container section .content h2
+{
+	font-size: 4em;
+	color: #bb1bd4;
+	text-align: center;
+}
+.container section .content p {
+	font-size: 1.3em;
+	padding: 0px 30px;
+	color: #000000;
+	text-align: left;
+	margin-top: 1px;
+}
+
+@media (max-width:767px) {
+
+	.border {
+		border: 0px solid !important
+	}
+}
+#scrollValue {
+	position: fixed;
+	width: 100%;
+	top: 48%;
+	align-items: center;
+	color: rgba(0, 0, 0, 0.6);
+	text-align: center;
+	font-size: 2rem;
+	z-index: 1;
+	/*padding: 10px 0;*/
+}
+.Button1 {
+	background-image: url('EthernetButton.png');
+	background-color: transparent;
+	background-size: cover;
+	cursor: pointer;
+	width: 232px;
+	height: 400px;
+	font-size: 2rem;
+	border: 0px solid #3498db;
+}
+.Button1:hover {
+	background-image: url("EthernetButtonHighlight.png");
+}
+.Screen2 {
+	background-image: url("screenBackgroup.png");
+	background-size:contain;
+	height: 270px;
+	width: 450px;
+	text-align: right;
+
+}
+.Screen2.close{
+	padding: 25px 25px 25px 25px;
+}
+.close {
+	background-image: url("closeButton.png");
+	background-size: cover;
+	background-color: transparent;
+	height: 25px;
+	width: 25px;
+}
+.menu-btn{
+	position:fixed;
+	display:flex;
+	justify-content:center;
+	align-items: center;
+	width: 80px;
+	height: 80px;
+	cursor:pointer;
+	transition: all .5s ease-in-out;
+	z-index:5
+}
+.menu-btn__burger {
+	width: 50px;
+	height: 6px;
+	background: #FFFFFF;
+	border-radius: 5px;
+	box-shadow: 0 5px 5px #5e2a2a;
+	transition: all .5s ease-in-out;
+}
+.menu-btn__burger::before,.menu-btn__burger::after {
+	content: '';
+	position:absolute;
+	width: 50px;
+	height: 6px;
+	background: #FFFFFF;
+	border-radius: 5px;
+	box-shadow: 0 5px 5px #5e2a2a;
+	transition: all .5s ease-in-out;
+}
+.menu-btn__burger::before{
+	transform: translateY(-16px);
+}
+.menu-btn__burger::after {
+	transform: translateY(16px);
+}
+.menu.btn.open .menu-btn__burger{
+	transform:translateX(-50px);
+	background: transparent;
+	box-shadow: none;
+}
+.menu-btn.open .menu-btn__burger::before{
+	transform: rotate(45deg) translate(35px,-35px);
+}
+.menu-btn.open .menu-btn__burger::after{
+	transform:rotate(-45deg) translate(35px, 35px);
+}
+.menu {
+	position: fixed;
+	justify-content: center;
+	align-items: center;
+	width: 80px;
+	height: 180px;
+	padding: 70px 0px 0 20px;
+	z-index: 4;
+	display: none;
+}
+.menu a{
+	margin-top: 10px;
+	margin-bottom: 10px;
+	color: black;
+	box-shadow: 0 2px 5px #5e2a2a;
+	padding: 1px 2px;
+	text-decoration: none;
+	display: flex;
+	background-color: rgba(255, 255, 255,0.7);
+	justify-content: center;
+	font-size: 20px;
+
+}
+.popup {
+	position: fixed;
+	width: 100%;
+	top: 37%;
+	left: 37%;
+	color: #fff;
+	width: 25vw;
+	height: 25vh;
+	text-align: center;
+	background: rgba(0, 0, 0, 0.3);
+	z-index: 9;
+	display:block;
+}
+.popup .content p {
+	margin: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%)
+}
+
+.popup .close-btn {
+	cursor: pointer;
+	position: absolute;
+	right: 5px;
+	top: 5px;
+	width: 30px;
+	height: 30px;
+	background: #222;
+	color: #fff;
+	font-size: 25px;
+	font-weight: 600;
+	line-height: 30px;
+	text-align: center;
+	border-radius: 50%;
+}
+
